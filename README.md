@@ -53,15 +53,17 @@ Select between **SOP Mode** (for technical processes) or **Onboarding Mode** (fo
    pip install langchain-ollama langchain-huggingface langchain-chroma streamlit pypdf python-docx
    
 4. **Pull the Local Model:**
+```
 Download the optimized local LLM used by NexusFlow for document synthesis and response generation.
    ```powershell
    ollama pull llama3.2:1b
 
 5. **Launch the UI:**
+```
 Start the Streamlit interface to access the ingestion and generation workflow.
 
-```powershell
-streamlit run interface.py
+  ```powershell
+  streamlit run interface.py
 ```
 
 Once launched, the UI becomes available locally in your browser.
