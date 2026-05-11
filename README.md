@@ -52,7 +52,7 @@ Select between **SOP Mode** (for technical processes) or **Onboarding Mode** (fo
    ```powershell
    pip install langchain-ollama langchain-huggingface langchain-chroma streamlit pypdf python-docx
    
-4. **Pull the Local Model**
+4. **Pull the Local Model:**
 Download the optimized local LLM used by NexusFlow for document synthesis and response generation.
    ```powershell
    ollama pull llama3.2:1b
