@@ -48,18 +48,16 @@ Select between **SOP Mode** (for technical processes) or **Onboarding Mode** (fo
    python -m venv venv
    .\venv\Scripts\activate
 
-
-
-## 2. Pull the Local Model
+3. **Install Production Dependencies:**
+   ```powershell
+   pip install langchain-ollama langchain-huggingface langchain-chroma streamlit pypdf python-docx
+   
+4. **Pull the Local Model**
 Download the optimized local LLM used by NexusFlow for document synthesis and response generation.
+   ```powershell
+   ollama pull llama3.2:1b
 
-```powershell
-ollama pull llama3.2:1b
-```
-
----
-
-## 3. Launch the Command Center
+5. **Launch the UI:**
 Start the Streamlit interface to access the ingestion and generation workflow.
 
 ```powershell
@@ -69,6 +67,7 @@ streamlit run interface.py
 Once launched, the UI becomes available locally in your browser.
 
 ---
+
 
 # 🔄 System Flow
 
