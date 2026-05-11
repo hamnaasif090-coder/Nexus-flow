@@ -17,27 +17,8 @@ NexusFlow uses a modular architecture designed to bypass hardware limitations th
 * **Generation Core:** Orchestrated via **LangChain** using **Llama 3.2 (1B)** for high-speed, low-RAM inference.
 * **Memory Manager:** Implements a "Search and Destroy" pattern, clearing the embedding model from RAM before spinning up the LLM to prevent system crashes on limited hardware.
 
-```mermaid
-flowchart TD
-    A[User query + documents\nPDF · DOCX · TXT] --> B
+<img width="1440" height="1040" alt="image" src="https://github.com/user-attachments/assets/3c9dc218-e81a-486c-9ae6-804d3139dcff" />
 
-    B[Ingestion Engine\nMulti-format extraction · chunking · preprocessing]
-    B --> C
-
-    C[Vector Brain\nChromaDB · all-MiniLM-L6-v2 · semantic search]
-    C --> D
-
-    D[Memory Manager\n'Search and Destroy' pattern\nClears embeddings from RAM before LLM loads]
-    D --> E
-
-    E[Generation Core\nLangChain · Llama 3.2 1B · low-RAM inference]
-    E --> F([Response])
-
-    style B fill:#1D9E75,color:#E1F5EE
-    style C fill:#534AB7,color:#EEEDFE
-    style D fill:#BA7517,color:#FAEEDA
-    style E fill:#993C1D,color:#FAECE7
-```
 
 ---
 
