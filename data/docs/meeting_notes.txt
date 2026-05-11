@@ -1,0 +1,24 @@
+MEETING NOTES - PROJECT ALPHA - MARCH 12
+Attendees: Sarah (PM), Mike (Dev), Jenny (Ops)
+
+Context:
+We really need to fix the deployment pipeline. Right now it's a mess. Mike says he's spending 3 hours a week just manually pushing bits. 
+
+Steps discussed:
+First, Mike needs to run the build script (npm run build).
+Then, he checks the 'dist' folder. 
+Jenny mentioned that before pushing to the server, we MUST run the security scan. That's 'npm audit'. If it fails, stop everything.
+Oh, wait—Sarah said we also need to notify the Slack channel #deploy-alerts before the final push.
+
+Server stuff:
+The server login is via SSH. Mike uses 'ssh admin@192.168.1.50'. 
+He copies files to /var/www/alpha. 
+Jenny wants us to restart the Nginx service every time. Command is 'sudo systemctl restart nginx'.
+
+Pain points:
+- Sometimes the server disk is full. 
+- If it's full, run 'df -h' to check and then clean the /tmp logs.
+- Mike forgets to notify Slack 50% of the time.
+
+Goal:
+Make this an official SOP so anyone can do it, not just Mike.
